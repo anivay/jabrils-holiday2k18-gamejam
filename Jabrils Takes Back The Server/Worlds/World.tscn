@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Entities/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Entities/Frog.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Tiles/platformerTiles.tres" type="TileSet" id=3]
+
+[node name="World" type="Node2D"]
+
+[node name="Player" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 160.134, 18.1196 )
+
+[node name="Frog" parent="." index="1" instance=ExtResource( 2 )]
+
+[node name="TileMap" type="TileMap" parent="." index="2"]
+
+scale = Vector2( 0.5, 0.5 )
+mode = 0
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -655347, 6, 0, -589824, 6, 0, -589823, 6, 0, -589822, 6, 0, -589821, 6, 0, -589820, 6, 0, -589819, 6, 0, -589818, 6, 0, -589817, 6, 0, -589815, 6, 0, -393198, 6, 0, -196594, 6, 0, 10, 6, 0, 131075, 4, 0, 131077, 4, 0, 327680, 5, 0, 589817, 5, 0, 589846, 0, 0, 589848, 0, 0, 589850, 0, 0, 720894, 5, 0, 655380, 0, 0, 655384, 3, 0, 720912, 0, 0, 720914, 0, 0, 720918, 3, 0, 851963, 6, 0, 851965, 6, 0, 851967, 6, 0, 786433, 6, 0, 786435, 6, 0, 786437, 6, 0, 786439, 6, 0, 786441, 6, 0, 786442, 0, 0, 786444, 0, 0, 786446, 0, 0, 786452, 3, 0, 786454, 3, 0, 786462, 2, 0, 851984, 3, 0, 851985, 3, 0, 851986, 3, 0, 851988, 3, 0, 983023, 7, 0, 983031, 7, 0, 917532, 2, 0, 1114090, 7, 0, 1048598, 2, 0, 1048600, 2, 0, 1048602, 2, 0, 1114132, 2, 0, 1179666, 2, 0, 1310702, 7, 0, 1376245, 7, 0, 1638385, 7, 0, 1834986, 7, 0, 2097133, 7, 0, 2162674, 7, 0 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+
