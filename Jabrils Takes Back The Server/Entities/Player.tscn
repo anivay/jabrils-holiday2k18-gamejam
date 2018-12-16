@@ -53,6 +53,8 @@ _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
+MULTI_JUMP = false
+MAX_EXTRA_JUMPS = 1
 
 [node name="Sprite" type="AnimatedSprite" parent="." index="0"]
 

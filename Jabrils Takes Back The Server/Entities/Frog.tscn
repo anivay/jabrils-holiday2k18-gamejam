@@ -23,7 +23,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 9, 5 )
 
-[node name="Frog" type="KinematicBody2D" index="0"]
+[node name="Frog" type="KinematicBody2D"]
 
 position = Vector2( 203, 341.999 )
 input_pickable = false

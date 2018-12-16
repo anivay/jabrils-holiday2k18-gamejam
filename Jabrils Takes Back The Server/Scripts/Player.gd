@@ -4,8 +4,8 @@ extends KinematicBody2D
 #                  STATS                   #
 ############################################
 
-const MAX_JUMPS = 1
-
+export var MULTI_JUMP = false
+export var MAX_EXTRA_JUMPS = 1
 var health = 100
 var hunger = 50 # acts like MP
 
@@ -22,7 +22,7 @@ const FRICTION_AIR = 0.05
 
 var motion = Vector2()
 
-var remaining_jumps = MAX_JUMPS
+var remaining_jumps = MAX_EXTRA_JUMPS
 
 func _physics_process(delta):
 	var friction = false
@@ -42,8 +42,8 @@ func _physics_process(delta):
 		$Sprite.play("Idle")	
 			
 	# is_on_floor is pretty buggy if we want to prevent direction change while in air
-	if is_on_floor():	
-		remaining_jumps = MAX_JUMPS
+	if is_on_floor():
+		remaining_jumps = MAX_EXTRA_JUMPS
 				
 		if friction == true:
 			motion.x = lerp(motion.x, 0, FRICTION_GROUND)	
@@ -59,11 +59,13 @@ func _physics_process(delta):
 			motion.x = lerp(motion.x, 0, FRICTION_AIR)
 	
 	# multi jumping 
-	if Input.is_action_just_pressed("ui_up"):	
-		if remaining_jumps > 0:
-			remaining_jumps -= 1
-			motion.y = JUMP_HEIGHT
-	
+	if Input.is_action_just_pressed("ui_up") and is_on_floor():	
+		motion.y = JUMP_HEIGHT
+		
+	elif Input.is_action_just_pressed("ui_up") and MULTI_JUMP:
+			if remaining_jumps > 0:
+				motion.y = JUMP_HEIGHT
+				remaining_jumps -= 1
 			
 	motion = move_and_slide(motion, UP)
 	

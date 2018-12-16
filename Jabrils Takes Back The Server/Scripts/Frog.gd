@@ -33,11 +33,11 @@ func _physics_process(delta):
 		$Sprite.play("Idle")
 		motion.x = 0
 		jumpCount = 1
-		#motion.x = lerp(motion.x,0,0.2)
+		motion.x = lerp(motion.x,0,0.2)
 
 	motion = move_and_slide(motion, UP)
-	#print("FROG: ",motion)
-	print("timer: ",$Timer.time_left)
-	print(randDir)
+	
+	#print("timer: ",$Timer.time_left)
+	#print(randDir)
 	pass
 	

@@ -12,6 +12,8 @@ position = Vector2( 10, -180 )
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
 position = Vector2( 160.134, 18.1196 )
+MULTI_JUMP = false
+MAX_EXTRA_JUMPS = 1
 
 [node name="Frog" parent="." index="1" instance=ExtResource( 2 )]
 
