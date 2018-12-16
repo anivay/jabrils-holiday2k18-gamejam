@@ -1,7 +1,18 @@
 extends KinematicBody2D
 
-const UP = Vector2(0, -1)
+############################################
+#                  STATS                   #
+############################################
+
 const MAX_JUMPS = 1
+
+var health = 100
+var hunger = 50 # acts like MP
+
+############################################
+#                 MOVEMENT                 #
+############################################
+const UP = Vector2(0, -1)
 const GRAVITY = 30
 const ACCELERATION = 50
 const MAX_SPEED = 250
@@ -55,4 +66,17 @@ func _physics_process(delta):
 	
 			
 	motion = move_and_slide(motion, UP)
+	
+	
+############################################
+#                 ATTACK                   #
+############################################
+
+func attack_physical():
+	# $Sprite.play("Physical Attack")
+	pass
+	
+func attack_ranged():
+	# $Sprite.play("Ranged Attack")
+	pass
 	
