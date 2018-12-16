@@ -5,7 +5,7 @@
 [ext_resource path="res://Tiles/platformerTiles.tres" type="TileSet" id=3]
 [ext_resource path="res://Entities/NextStagePortal.tscn" type="PackedScene" id=4]
 
-[node name="World" type="Node2D"]
+[node name="World" type="Node2D" index="0"]
 
 position = Vector2( 10, -180 )
 
@@ -15,8 +15,11 @@ position = Vector2( 160.134, 18.1196 )
 
 [node name="Frog" parent="." index="1" instance=ExtResource( 2 )]
 
+position = Vector2( -17.4642, 149.928 )
+
 [node name="TileMap" type="TileMap" parent="." index="2"]
 
+scale = Vector2( 0.5, 0.5 )
 mode = 0
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 64, 64 )
@@ -34,11 +37,16 @@ collision_mask = 1
 occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( -262144, 7, 0, -131080, 4, 0, -131062, 6, 0, 65531, 4, 0, 6, 6, 0, 8, 6, 0, 10, 6, 0, 327675, 0, 0, 458747, 3, 0, 458749, 0, 0, 458751, 0, 0, 393217, 0, 0, 393219, 0, 0, 393221, 0, 0, 393223, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="NextStagePortal" parent="." index="3" instance=ExtResource( 4 )]
 
-position = Vector2( 402.662, 303.319 )
-scale = Vector2( 0.8125, 0.65625 )
+position = Vector2( 255.173, 132.249 )
+scale = Vector2( 0.5, 0.5 )
+_sections_unfolded = [ "Transform" ]
 next_scene = "res://Worlds/World2.tscn"
 
 

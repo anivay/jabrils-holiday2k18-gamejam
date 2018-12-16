@@ -8,11 +8,11 @@
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( -515.78, -398.343 )
-scale = Vector2( 2.15911, 2.11959 )
+position = Vector2( 188.147, -140.588 )
 
 [node name="TileMap" type="TileMap" parent="." index="1"]
 
+scale = Vector2( 0.5, 0.5 )
 mode = 0
 tile_set = ExtResource( 2 )
 cell_size = Vector2( 64, 64 )
@@ -30,14 +30,16 @@ collision_mask = 1
 occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( -262153, 6, 0, -131081, 6, 0, -131079, 6, 0, -196603, 5, 0, -3, 6, 0, -1, 6, 0, -65535, 6, 0, 196603, 0, 0, 196605, 0, 0, 196607, 0, 0, 131073, 0, 0, 131075, 0, 0, 131077, 0, 0 )
+_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="NextStagePortal" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 402.029, 45.9459 )
-scale = Vector2( 0.703903, 0.64759 )
+position = Vector2( -253.664, -220.1 )
+scale = Vector2( 0.5, 0.5 )
+_sections_unfolded = [ "Transform" ]
 next_scene = "res://Worlds/World.tscn"
 
 
