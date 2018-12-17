@@ -14,7 +14,7 @@ func _ready():
 
 func _physics_process(delta):
 	motion.y +=GRAVITY
-
+		##### JUMPING LOGIC #####
 	if is_on_floor() and jumpCount > 0 and $Timer.time_left == 0:
 		randDir = randi()%11+1
 		if randDir >= 5:

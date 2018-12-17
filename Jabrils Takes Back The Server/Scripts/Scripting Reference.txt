@@ -1,0 +1,11 @@
+A file with some example code snippets we might need - don't delete
+
+		An example to programitically add scenes / entities
+
+		var frogload = preload("../Entities/Frog.tscn")
+
+		var frog = frogload.instance()
+
+		frog.set_position(Vector2(100,100))
+
+		get_node("/root/World").add_child(frog)

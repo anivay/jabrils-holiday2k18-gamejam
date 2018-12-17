@@ -18,6 +18,7 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 next_scene = null
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
@@ -26,7 +27,7 @@ position = Vector2( -4, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 640, 641.25, 130, 252.75 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 

@@ -14,6 +14,11 @@ config/name="Jabrils Takes Back The Server"
 run/main_scene="res://Worlds/World.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+PlayerVARS="*res://Worlds/PlayerVARS.gd"
+ConstVars="*res://Worlds/ConstVars.gd"
+
 [display]
 
 window/size/test_width=1280
@@ -37,6 +42,8 @@ ui_up=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"",
  ]
 ui_down=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"unicode":0,"echo":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":13,"pressure":0.0,"pressed":false,"script":null)
+ ]
+toggle_multi_jump=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":81,"unicode":0,"echo":false,"script":null)
  ]
 
 [rendering]
