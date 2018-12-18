@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Entities/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Tiles/platformerTiles.tres" type="TileSet" id=2]
+[ext_resource path="res://Entities/NextStagePortal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Misc/GameArea.tscn" type="PackedScene" id=4]
+
+[node name="World2" type="Node"]
+
+[node name="Player" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 188.147, -140.588 )
+
+[node name="TileMap" type="TileMap" parent="." index="1"]
+
+scale = Vector2( 0.5, 0.5 )
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -262153, 6, 0, -131081, 6, 0, -131079, 6, 0, -196603, 5, 0, -3, 6, 0, -1, 6, 0, -65535, 6, 0, 196603, 0, 0, 196605, 0, 0, 196607, 0, 0, 131073, 0, 0, 131075, 0, 0, 131077, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="NextStagePortal" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( -253.664, -220.1 )
+scale = Vector2( 0.5, 0.5 )
+next_scene = "res://Worlds/World.tscn"
+
+[node name="GameArea" parent="." index="3" instance=ExtResource( 4 )]
+
+
