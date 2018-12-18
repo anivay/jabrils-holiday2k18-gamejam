@@ -1,7 +1,7 @@
 extends Area2D
 var array = ConstVars.whiteObjs # use an array whitelist to avoid unexpected teleports
 var targetPos = Vector2(100, 0) # In the future we could refer targetPos to a Scene object, and place that at the target coords
-
+var motion = PlayerVARS.motion
 
 	##### Teleport any entities to targetPos #####
 func _on_Area2D_body_exited(body):

@@ -11,7 +11,7 @@
 [ext_resource path="res://Worlds/PlayerVARS.gd" type="Script" id=9]
 [ext_resource path="res://Worlds/ConstVars.gd" type="Script" id=10]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 25, 30 )
@@ -48,8 +48,8 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -262144, 7, 0, -131080, 4, 0, -131062, 6, 0, 65531, 4, 0, 6, 6, 0, 8, 6, 0, 10, 6, 0, 131038, 5, 0, 131040, 5, 0, 131042, 8, 0, 131044, 8, 0, 196582, 8, 0, 262120, 8, 0, 327658, 8, 0, 327675, 0, 0, 393196, 8, 0, 458734, 8, 0, 458747, 3, 0, 458749, 0, 0, 458751, 0, 0, 393217, 0, 0, 393219, 0, 0, 393221, 0, 0, 393223, 0, 0, 524272, 8, 0, 524278, 8, 0, 589810, 8, 0, 589812, 8, 0 )
-_sections_unfolded = [ "Transform" ]
+tile_data = PoolIntArray( -262144, 7, 0, -131080, 4, 0, -131062, 6, 0, 65531, 4, 0, 6, 6, 0, 8, 6, 0, 10, 6, 0, 131038, 5, 0, 131040, 5, 0, 131042, 8, 0, 131044, 8, 0, 196582, 8, 0, 262120, 8, 0, 327658, 8, 0, 327675, 0, 0, 393196, 8, 0, 458734, 8, 0, 458747, 3, 0, 458749, 0, 0, 458751, 0, 0, 393217, 0, 0, 393219, 0, 0, 393221, 0, 0, 393223, 0, 0, 524272, 8, 0, 524278, 8, 0, 589810, 8, 0, 589812, 8, 0, 1900521, 2, 0, 1900523, 2, 0, 1900525, 2, 0, 1900527, 2, 0, 1900529, 2, 0, 1900531, 2, 0, 1900533, 2, 0, 1900535, 2, 0, 1900537, 2, 0, 1900539, 2, 0, 1900541, 2, 0, 1900543, 2, 0, 1835009, 2, 0, 1835011, 2, 0, 1835013, 2, 0, 1835015, 2, 0, 1835017, 2, 0, 1835019, 2, 0, 1835021, 2, 0, 1835023, 2, 0, 1835025, 2, 0, 1835027, 2, 0, 1835029, 2, 0, 1835031, 2, 0, 1835033, 2, 0, 1835035, 2, 0, 1835037, 2, 0, 1835039, 2, 0 )
+_sections_unfolded = [ "Cell", "Collision", "Occluder" ]
 __meta__ = {
 "_edit_lock_": true
 }
@@ -87,10 +87,11 @@ _sections_unfolded = [ "Region", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World3Door" index="1"]
 
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="PlayerVARS" type="Node2D" parent="." index="6"]
 
+editor/display_folded = true
 script = ExtResource( 9 )
 MULTI_JUMP = false
 health = 100

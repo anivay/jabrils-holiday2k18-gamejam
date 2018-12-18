@@ -1,6 +1,6 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Player/Idle0.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Player/Run0.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Player/Run1.png" type="Texture" id=4]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Sprites/Player/Run7.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/Player/Jump1.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/Player/Jump3.png" type="Texture" id=10]
+[ext_resource path="res://Scripts/Player/Player_Movement.gd" type="Script" id=11]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -41,7 +42,7 @@ custom_solver_bias = 0.0
 radius = 14.0
 height = 28.0
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 position = Vector2( 475.134, 76.1196 )
 input_pickable = false
@@ -53,7 +54,6 @@ _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
-MAX_EXTRA_JUMPS = 1
 
 [node name="Sprite" type="AnimatedSprite" parent="." index="0"]
 
@@ -115,5 +115,10 @@ uppercase = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="Player_Movement" type="Node" parent="." index="4"]
+
+script = ExtResource( 11 )
+MAX_EXTRA_JUMPS = 1
 
 
